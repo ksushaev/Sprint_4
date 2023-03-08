@@ -38,14 +38,51 @@ public class MainPage {
         this.driver = driver;
     }
 
-    public void scrollAndClickOnFirstQuestion(int i) {
-        WebElement element = driver.findElement(By.id(locatorOfQuestion[i]));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
-        element.click();
-    }
-
-    public String getAnswerForFirstQuestion(int a) {
-        return driver.findElement(By.id(locatorOfAnswer[a])).getText();
+    //по номеру вопроса выбираем нужный, кликаем на него, получаем соответствующий номеру текст ответа
+    public String scrollAndClickOnFirstQuestion(int questionNumber) {
+        if (questionNumber == 1) {
+            WebElement element = driver.findElement(By.id(locatorOfQuestion[0]));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
+            element.click();
+            return driver.findElement(By.id(locatorOfAnswer[0])).getText();
+        } else if (questionNumber == 2) {
+            WebElement element = driver.findElement(By.id(locatorOfQuestion[1]));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
+            element.click();
+            return driver.findElement(By.id(locatorOfAnswer[1])).getText();
+        } else if (questionNumber == 3) {
+            WebElement element = driver.findElement(By.id(locatorOfQuestion[2]));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
+            element.click();
+            return driver.findElement(By.id(locatorOfAnswer[2])).getText();
+        } else if (questionNumber == 4) {
+            WebElement element = driver.findElement(By.id(locatorOfQuestion[3]));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
+            element.click();
+            return driver.findElement(By.id(locatorOfAnswer[3])).getText();
+        } else if (questionNumber == 5) {
+            WebElement element = driver.findElement(By.id(locatorOfQuestion[4]));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
+            element.click();
+            return driver.findElement(By.id(locatorOfAnswer[4])).getText();
+        } else if (questionNumber == 6) {
+            WebElement element = driver.findElement(By.id(locatorOfQuestion[5]));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
+            element.click();
+            return driver.findElement(By.id(locatorOfAnswer[5])).getText();
+        } else if (questionNumber == 7) {
+            WebElement element = driver.findElement(By.id(locatorOfQuestion[6]));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
+            element.click();
+            return driver.findElement(By.id(locatorOfAnswer[6])).getText();
+        } else if (questionNumber == 8) {
+            WebElement element = driver.findElement(By.id(locatorOfQuestion[7]));
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
+            element.click();
+            return driver.findElement(By.id(locatorOfAnswer[7])).getText();
+        } else {
+            return "Ошибка, что-то с вопросом";
+        }
     }
 
     public void clickOnOrderButton(String placeOfButton) {
