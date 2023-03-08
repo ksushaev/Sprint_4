@@ -44,7 +44,6 @@ public class NewOrderTest {
 
     @Before
     public void setup() {
-        System.setProperty("webdriver.chrome.driver", "/Users/ksenianikulsina/WebDriver/bin/chromedriver");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get(AppConfig.URL);
