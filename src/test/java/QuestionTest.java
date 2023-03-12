@@ -37,14 +37,14 @@ public class QuestionTest {
     @Parameterized.Parameters
     public static Object[][] getAnswerForQuestion() {
         return new Object[][]{
-                {1, expectedResult[0]},
-                {2, expectedResult[1]},
-                {3, expectedResult[2]},
-                {4, expectedResult[3]},
-                {5, expectedResult[4]},
-                {6, expectedResult[5]},
-                {7, expectedResult[6]},
-                {8, expectedResult[7]},
+                {0, expectedResult[0]},
+                {1, expectedResult[1]},
+                {2, expectedResult[2]},
+                {3, expectedResult[3]},
+                {4, expectedResult[4]},
+                {5, expectedResult[5]},
+                {6, expectedResult[6]},
+                {7, expectedResult[7]},
         };
     }
 
